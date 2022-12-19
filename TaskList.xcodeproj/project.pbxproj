@@ -14,6 +14,7 @@
 		03EB9B65294FE0CF00305E5D /* TaskListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EB9B64294FE0CF00305E5D /* TaskListTests.swift */; };
 		03EB9B6F294FE0CF00305E5D /* TaskListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EB9B6E294FE0CF00305E5D /* TaskListUITests.swift */; };
 		03EB9B71294FE0CF00305E5D /* TaskListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EB9B70294FE0CF00305E5D /* TaskListUITestsLaunchTests.swift */; };
+		03EB9B862950CE8000305E5D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03EB9B852950CE8000305E5D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		03EB9B6A294FE0CF00305E5D /* TaskListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03EB9B6E294FE0CF00305E5D /* TaskListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListUITests.swift; sourceTree = "<group>"; };
 		03EB9B70294FE0CF00305E5D /* TaskListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		03EB9B852950CE8000305E5D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +96,10 @@
 		03EB9B52294FE0CE00305E5D /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
-				03EB9B53294FE0CE00305E5D /* TaskListApp.swift */,
-				03EB9B55294FE0CE00305E5D /* ContentView.swift */,
-				03EB9B57294FE0CF00305E5D /* Assets.xcassets */,
-				03EB9B59294FE0CF00305E5D /* Preview Content */,
+				03EB9B7D294FE19000305E5D /* Model */,
+				03EB9B7E294FE19700305E5D /* View */,
+				03EB9B7F294FE19F00305E5D /* ViewModel */,
+				03EB9B80294FE1AF00305E5D /* App */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -125,6 +127,39 @@
 				03EB9B70294FE0CF00305E5D /* TaskListUITestsLaunchTests.swift */,
 			);
 			path = TaskListUITests;
+			sourceTree = "<group>";
+		};
+		03EB9B7D294FE19000305E5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03EB9B7E294FE19700305E5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03EB9B55294FE0CE00305E5D /* ContentView.swift */,
+				03EB9B852950CE8000305E5D /* README.md */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03EB9B7F294FE19F00305E5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		03EB9B80294FE1AF00305E5D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				03EB9B53294FE0CE00305E5D /* TaskListApp.swift */,
+				03EB9B57294FE0CF00305E5D /* Assets.xcassets */,
+				03EB9B59294FE0CF00305E5D /* Preview Content */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03EB9B862950CE8000305E5D /* README.md in Resources */,
 				03EB9B5B294FE0CF00305E5D /* Preview Assets.xcassets in Resources */,
 				03EB9B58294FE0CF00305E5D /* Assets.xcassets in Resources */,
 			);
@@ -416,13 +452,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TaskList/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TaskList/App/Preview Content\"";
 				DEVELOPMENT_TEAM = 9JG2MU7PT5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -445,13 +482,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TaskList/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TaskList/App/Preview Content\"";
 				DEVELOPMENT_TEAM = 9JG2MU7PT5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
