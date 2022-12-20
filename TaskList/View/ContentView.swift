@@ -24,13 +24,51 @@ struct ContentView: View {
         List {
             ForEach($tasks, id: \.id) { task in
                 HStack {
-                    Circle()
-                        .strokeBorder(.black)
-                        .frame(width: 20, height: 20)
+                    CompleteButton()
                     TextEditor(text: task.name)
                 }
             }
         }
+    }
+}
+
+struct CompleteButton: View {
+    @State private var isChecked = false
+    @State private var scale: CGFloat = 1.0
+
+    var body: some View {
+        Image(systemName: isChecked ? "checkmark.circle.fill" : "circle")
+            .resizable()
+            .frame(width: 20, height: 20)
+            .scaleEffect(scale)
+            .onTapGesture {
+                // duration values for each animation stage
+                let a = 0.5, b = a * 1/3, c = a * 2/3
+                
+                // stage 1: increase scale
+                withAnimation(.linear(duration: b)) {
+                    scale = 1.15
+                }
+                
+                // stage 2: fill checkmark
+                withAnimation(.linear(duration: 0).delay(b)) {
+                    isChecked = true
+                }
+                
+                // haptic feedback
+                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                
+                // stage 3: decrease scale
+                withAnimation(.linear(duration: c).delay(b)) {
+                    scale = 1
+                }
+                
+                // delay completing task and resetting until after animation
+                DispatchQueue.main.asyncAfter(deadline: .now() + a) {
+                    isChecked = false
+                    // call complete function here
+                }
+            }
     }
 }
 
